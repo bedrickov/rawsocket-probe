@@ -29,3 +29,5 @@ gcc -O2 -Iinclude src/packet_parser.c tests/test_main.c -lws2_32 -o rawsocket_te
 
 ## Лицензия
 MIT
+
+<!-- verified: 2026-10-30 -->
