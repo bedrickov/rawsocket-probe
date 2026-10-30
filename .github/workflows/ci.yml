@@ -11,6 +11,10 @@ jobs:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Enable MSVC Command Prompt
+        uses: ilammy/msvc-dev-cmd@v1
+        with:
+          arch: x64
       - name: Compile and Test with MSVC
         run: |
           cl /O2 /Iinclude src/packet_parser.c tests/test_main.c ws2_32.lib /Ferawsocket_tests.exe
